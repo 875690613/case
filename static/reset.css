@@ -67,4 +67,6 @@ input::-webkit-input-placeholder{
 .bottom{background: #fff; position: fixed; bottom: 0; width: 100%; max-width: 750px;}
 .bottom ul{}
 .bottom ul li{width: 25%; float: left; font-size: 10px; color: #808080FF; padding: 8px 0 5px 0;}
-.bottom ul li i{display: block;font-size: 20px}
+.bottom ul li i{display: block;font-size: 20px;}
+
+/* 测试git提交 */
