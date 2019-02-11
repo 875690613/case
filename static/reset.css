@@ -61,11 +61,10 @@ input::-webkit-input-placeholder{
 .title{ height: 44px;; line-height: 44px; padding: 0 12.5px; text-align: center; color: #333; font-size: 16px; background: #ffffff; overflow: hidden; }
 .title i{ display:block; font-size: 16px; float: left; cursor: pointer; }
 .fl { float: left; display: block; }
-
+.banner img{width: 100%;max-width: 750px;}
 
 /* 公共底部 */
-.bottom{background: #fff; position: fixed; bottom: 0; width: 100%; max-width: 750px;}
-.bottom ul{}
+.bottom{background: #fff; position: fixed; bottom: 0; width: 100%; max-width: 750px; border-top: 1px solid #DCDFE6FF}
 .bottom ul li{width: 25%; float: left; font-size: 10px; color: #808080FF; padding: 8px 0 5px 0;}
 .bottom ul li i{display: block;font-size: 20px;}
 

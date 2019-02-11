@@ -236,7 +236,6 @@ ul li{ border-bottom: 1px solid #f2f2f2;text-align: left; font-size: 16px; overf
 .title .hb{ float: right; } 
 .title .hb i{font-size: 10px; margin-top: 6px; color: #646466; float: right; font-family: STXihei; line-height: 16px; width: 24px;} 
 .title .hb img{width: 32px; }
-.banner img{width: 100%;max-width: 750px;}
 .detailsNav{overflow: hidden; background: #FFFFFF;}
 .detailsNav li{cursor: pointer; line-height: 44px; color: #646466; font-size: 16px; width: 33.333%; float: left; text-align: center}
 .detailsNav li:hover,.detailsNav li.acrive{color: #31C27C;}

@@ -66,29 +66,63 @@
         </ul>
       </div>
       <!-- 职位详情列表 -->
-      <div class="positionDetail bgfff">
-        <div class="pdTop clearfix">
-          <h2>月嫂<span>12999元/26天</span></h2>
-          <div><span class="iconfont icon-nianling">29-39岁</span><span class="iconfont icon-dizhi">上海市-徐汇区</span></div>
-          <p>辅食、早教、年纪小于50岁，会普通话，性格开朗，喜欢小孩，育儿经验5年以上</p>
+      <div  v-if="positions.length">
+      <div class="positionDetail bgfff"  v-for="(item,index) in positions" :key="index">
+        <!-- <div v-for="(item,index) in positions" :key="index"> -->
+
+        
+          <div class="pdTop clearfix" @click="goDetail(item.id,item.position)">
+            <h2>{{item.position}}<span>{{item.salary}}/月</span></h2>
+            <div><span class="iconfont icon-nianling">{{item.age}}</span><span class="iconfont icon-dizhi">{{item.address}}</span></div>
+            <p>{{item.intro}}</p>
+          </div>
+          <div class="pdbottom"><span>{{item.company}}</span><a href="" class="btn brd3 bggreen iconfont icon-dianhua1">{{item.people}}</a></div>
         </div>
-        <div class="pdbottom"><span>天天家政</span><a href="" class="btn brd3 bggreen iconfont icon-dianhua1">王老师</a></div>
       </div>
     </div>
+  <my-footer></my-footer>
   </div>
 </template>
 
 <script>
+import myFooter from "@/components/common/MyFooter"
+import Positions from '@/data/positions'
+
 export default {
   name: 'mobile',
   data(){
     return {
+      positions: []
+    }
+  },
+  components:{
+    myFooter
+  },
+  created () {
+    this.positions = Positions
+  },
+  methods:{
+    goDetail(id,position){
+      this.$router.push(
+        {
+         /*  name:'positionDetails',
+          params: {
+            positionId: id
+          } */
+          path:"positionDetails",
+          query:{
+            id:id,
+            position:position
+          }
+        }
+      )
     }
   }
 }
 </script>
 
 <style scoped>
+.main{margin-bottom: 80px;}
 .positionList{overflow: hidden;padding: 5px 6.7% 5px 6.7%;}
 .positionList dl{float: left; width: 25%;}
 .positionList dl dt span{text-align: center;font-size: 42px; color: #FFB06A}

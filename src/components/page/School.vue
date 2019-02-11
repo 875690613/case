@@ -7,29 +7,24 @@
     </div>
     <div class="main">
       <div class="mySetting">
-        <div class="msTop">
-          <i class="iconfont icon-tixing">提醒</i>
-          <dl>
-            <dt><i class="iconfont icon-gerenzhongxin2"></i></dt>
-            <dd>查看个人详情</dd>
-          </dl>
-        </div>
-        <div class="msList">
-          <ul>
-            <li><i class="iconfont icon-boshi">培训记录</i><i class="iconfont icon-more"></i></li>
-            <li><i class="iconfont icon-zhengshu">我的证书</i><i class="iconfont icon-more"></i></li>
-            <li><i class="iconfont icon-hongbao">邀请红包</i><span>2.90元</span><i class="iconfont icon-more"></i></li>
-            <li><i class="iconfont icon-xiaoxi1">消息中心</i><i class="iconfont icon-more"></i></li>
-          </ul>
-        </div>
+        院校列表
       </div>
     </div>
-    <My-footer></My-footer>
+
+    <!-- <div class="bottom">
+      <ul>
+        <li><i class="iconfont icon-icon1"></i>微课堂</li>
+        <li><i class="iconfont icon-renwufangtanfuben4"></i>找工作</li>
+        <li><i class="iconfont icon-yuanxiaoku"></i>院校</li>
+        <li class="cgreen"><i class="iconfont icon-wodedangxuan"></i>我的</li>
+      </ul>
+    </div> -->
+    <my-footer></my-footer>
   </div>
 </template>
 
 <script>
-import MyFooter from "@/components/common/MyFooter"
+import myFooter from "@/components/common/MyFooter"
 export default {
   name: 'mobile',
   data(){
@@ -40,13 +35,10 @@ export default {
     choose(i){
       this.ischoose = i
       console.log(this.ischoose)
-    },
-    goSchool (){
-
     }
   },
   components:{
-    MyFooter
+    myFooter
   }
 }
 </script>
